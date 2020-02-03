@@ -1,0 +1,9 @@
+
+
+{if isset($err_empty)}
+  <ul>
+    {foreach from=$err_empty item=msg}
+    <li>{$msg}</li>
+    {/foreach}
+  </ul>
+{/if}

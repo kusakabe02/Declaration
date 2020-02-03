@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<title>備品管理システム ユーザ登録</title>
+</head>
+<body>
+  <h1>備品管理システム ユーザ登録</h1><br />
+  {if isset($err_empty)||isset($err_len)||isset($err_preg)}
+    <ul class="err_msg">
+      {foreach from=$err_empty item=msg}
+      <li>{$msg}</li>
+      {/foreach}
+
+      {foreach from=$err_len item=msg}
+      <li>{$msg}</li>
+      {/foreach}
+
+      {foreach from=$err_preg item=msg}
+      <li>{$msg}</li>
+      {/foreach}
+    </ul>
+  {/if}
+
+{*ログインしてないとき*}
+  {if isset($err_login)}
+    {$err_login}
+  {/if}
+
+    <br />
+    <form method="post" action="user_signup_input.php">
+     <div align="left">ユーザ名を入力してください。  :</div>
+       <input type="text" name="user"><br />
+     <div align="left">パスワードを入力してください。:</div>
+       <input type="password" name="pass1"><br />
+       <br />
+       <div align="left">確認のため再度パスワードを入力してください。:</div>
+         <input type="password" name="pass2"><br />
+         <br />
+       <input type="submit" name="submit" value="上記内容で登録">
+       </form>
+       <button type="button" name ="back" onclick="history.back()">戻る</button>
+</body>
+</html>
