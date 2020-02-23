@@ -1,6 +1,9 @@
 <?php
 session_start();
-#POSTデータ受け取り
+/*
+画面なし。処理だけ。
+あくまでバリデーションチェックをして次の確認画面に渡すところまでしか書かない。
+*/
 $users_name=$_POST['user'];
 $users_pass1=$_POST['pass1'];
 $users_pass2=$_POST['pass2'];
@@ -25,7 +28,7 @@ if(empty($_POST['pass2'])){
 }elseif($users_pass1!=$users_pass2){
   $preg_form[] = "確認パスワードが一致しません。";
 }
-#エラー表示用配列に値が存在しなかった場合、POSTされたデータを次のphpへ渡す。
+#エラー表示用配列に値が存在しなかった（入力データに誤りがなかった）場合、POSTされたデータを次の確認画面(check)へ渡す。
 #エラーがあった場合、登録画面にエラーメッセージを渡してそちらに遷移する
 if(empty($empty_form) && empty($len_form) && empty($preg_form)){
   $_SESSION[input_name] = $users_name;

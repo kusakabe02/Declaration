@@ -1,10 +1,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-<title>備品管理システム ユーザ登録</title>
+<title>「宣言」SNS DeNS  新規登録</title>
 </head>
 <body>
-  <h1>備品管理システム ユーザ登録</h1><br />
+  <h1>DeNS 新規宣言者登録</h1><br />
   {if isset($err_empty)||isset($err_len)||isset($err_preg)}
     <ul class="err_msg">
       {foreach from=$err_empty item=msg}
@@ -28,7 +28,7 @@
 
     <br />
     <form method="post" action="user_signup_input.php">
-     <div align="left">ユーザ名を入力してください。  :</div>
+     <div align="left">宣言者名（ユーザ名）を入力してください。  :</div>
        <input type="text" name="user"><br />
      <div align="left">パスワードを入力してください。:</div>
        <input type="password" name="pass1"><br />

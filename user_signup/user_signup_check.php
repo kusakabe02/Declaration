@@ -11,7 +11,6 @@ require_once '../smarty/Smarty.class.php';
 $smarty = new Smarty();
 $smarty->template_dir = '../templates/';
 $smarty->compile_dir  = '../templates_c/';
-
 #DB接続
 try {
 
@@ -28,18 +27,24 @@ try {
 
   //パスワードをハッシュに
   $hash_pass = password_hash($users_pass1,PASSWORD_DEFAULT);
-
+ //タイムゾーンを東京に
+  date_default_timezone_set('Asia/Tokyo');
 #関数化（クラス化できそう？）
 #データベース接続処理
 
-  $pdo = new PDO('mysql:dbname=emanage;host=localhost;charset=utf8','ehoge','Xsw2#edc');
-  //var_dump($dbh->errorInfo());
-  $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  $pdo = new PDO('mysql:dbname=DeclarerSystem;host=localhost;charset=utf8','ehoge','Xsw2#edc');
 
-  $sql='INSERT INTO users(name,passwd) VALUES(?,?)';
+  $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+/*
+前画面からの入力値、プロフィールは初期値を入れる。
+*/
+  $sql='INSERT INTO Declarer(name,password,profile,image_path,entry_date) VALUES(?,?,?,?,?)';
   $stmt=$pdo->prepare($sql);
   $data[]=$users_name;
   $data[]=$hash_pass;
+  $data[]="よろしくお願いします。";
+  $data[]="../img/profile/default.png";
+  $data[]=date("Y-m-d");
 
   $stmt->execute($data);
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2019-12-30 07:17:18
+/* Smarty version 3.1.34-dev-7, created on 2020-02-10 09:11:00
   from '/vagrant/templates/signup.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e09a47e9a6295_17870830',
+  'unifunc' => 'content_5e411e24862ab5_83076056',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a6a7ff4332d1d5db82f261258896fcf7c52460c7' => 
     array (
       0 => '/vagrant/templates/signup.html',
-      1 => 1577690234,
+      1 => 1581325862,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e09a47e9a6295_17870830 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e411e24862ab5_83076056 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-<title>備品管理システム ユーザ登録</title>
+<title>「宣言」SNS DeNS  新規登録</title>
 </head>
 <body>
-  <h1>備品管理システム ユーザ登録</h1><br />
+  <h1>DeNS 新規宣言者登録</h1><br />
   <?php if (isset($_smarty_tpl->tpl_vars['err_empty']->value) || isset($_smarty_tpl->tpl_vars['err_len']->value) || isset($_smarty_tpl->tpl_vars['err_preg']->value)) {?>
     <ul class="err_msg">
       <?php
@@ -75,7 +75,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <br />
     <form method="post" action="user_signup_input.php">
-     <div align="left">ユーザ名を入力してください。  :</div>
+     <div align="left">宣言者名（ユーザ名）を入力してください。  :</div>
        <input type="text" name="user"><br />
      <div align="left">パスワードを入力してください。:</div>
        <input type="password" name="pass1"><br />

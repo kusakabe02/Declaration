@@ -12,6 +12,6 @@ $smarty->assign('msg',$msg);
 $smarty->assign('test2', 'テスト2です。');
 $smarty->assign('test3', 'テスト3です。');
 
-$smarty->display('login.html');
+$smarty->display('login.tpl');
 session_destroy();
 ?>
