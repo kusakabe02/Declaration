@@ -1,12 +1,33 @@
 {*  宣言一覧 *}
+<script  type="text/javascript">
+function complete_check(){
+  if(window.confirm('この宣言を「達成」とします！ 宜しいですか？')){
+        return true;
+  }
+  else{
+    return false;
+  }
+}
+
+function faild_check(){
+  if(window.confirm('この宣言を「撤回」とします…。宜しいですか？（宣言はしばらく削除されません。）')){
+        return true;
+  }
+  else{
+    return false;
+  }
+}
+</script>
+
 <div name="show">
 <br>
 {foreach from=$my_declarations item="my_declaration"}
 <br>
-{$my_declaration['title']}
+タイトル：{$my_declaration['title']}
 <br>
-{$my_declaration['declarer_id']}
-{$my_declaration['texts']}
+宣言者：{$my_declaration['name']}<br>
+{$my_declaration['texts']}<br>
+宣言日：{$my_declaration['dates']|date_format:"%Y年 %m月 %d日"}<br>
 期限：{$my_declaration['period']|date_format:"%Y年 %m月 %d日"}
 <br><br>
 {* 達成/失敗ボタン。idはhiddenで隠す。*}
@@ -24,5 +45,7 @@
 </form>
 </div>
 {/if}
+
+  <br>
 {/foreach}
 </div>

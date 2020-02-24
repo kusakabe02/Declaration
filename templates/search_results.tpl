@@ -1,5 +1,5 @@
 {include file="./tpl/mypage_header.tpl"}
-
+<button type="button" name ="back" onclick="history.back()">戻る</button>
 <h2>宣言検索結果</h2><br>
 ヒット数：{count($search_results)}件<br><br>
 {foreach from=$search_results item=result}
