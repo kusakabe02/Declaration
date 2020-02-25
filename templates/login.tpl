@@ -7,7 +7,7 @@
   <h1>DeNSへログイン</h1><br />
   {$smarty.session.login_faild}
 
-    <form method="post" action="user_login_check.php">
+    <form method="post" action="user_login/user_login_check.php">
      <div align="left">登録宣言者名  :</div>
        <input type="text" name="user"><br />
      <div align="left">パスワード :</div>

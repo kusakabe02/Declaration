@@ -1,12 +1,12 @@
 .tab {
-  border-bottom: 3px solid #fb4343;
+  border-bottom: 3px solid #483d8b;
 }
 .tab li {
   color: #333;
   float: left;
   margin: 0 10px -1px 0;
   padding: 10px 20px;
-  border: 1px solid #fb4343;
+  border: 1px solid #483d8b;
   cursor: pointer;
   list-style: none;
   transition: .3s;
@@ -14,7 +14,7 @@
 }
 .tab li.active {
   color: #fff;
-  background: #fb4343;
+  background: #483d8b;
   cursor: auto;
   list-style: none
 }

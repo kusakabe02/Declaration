@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-10 09:11:00
+/* Smarty version 3.1.34-dev-7, created on 2020-02-25 00:57:49
   from '/vagrant/templates/signup.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e411e24862ab5_83076056',
+  'unifunc' => 'content_5e54710d5c0537_86477374',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a6a7ff4332d1d5db82f261258896fcf7c52460c7' => 
     array (
       0 => '/vagrant/templates/signup.html',
-      1 => 1581325862,
+      1 => 1582591106,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e411e24862ab5_83076056 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e54710d5c0537_86477374 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
@@ -85,7 +85,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
          <br />
        <input type="submit" name="submit" value="上記内容で登録">
        </form>
-       <button type="button" name ="back" onclick="history.back()">戻る</button>
+       <button type="button" name ="back" onclick="history.back()">一画面前へ戻る</button>
 </body>
 </html>
 <?php }
